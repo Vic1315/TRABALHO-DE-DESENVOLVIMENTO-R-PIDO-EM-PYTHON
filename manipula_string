@@ -1,0 +1,12 @@
+def manipula_string(texto: str, pos: int) -> str:
+    print(f"Contagem com determinação de inicio e fim da pesquisa no stri")
+    print(f"Verifica onde string inicia, caso exista: {texto.find("aula")} )
+    print(f"Verifica onde string inicia, caso exista: {texto.find("Python")}")
+    print(f"{'String' in texto}")
+    print(f"{'Raphael' in texto}")
+
+if __name__ == "__main__":
+    nome_arquivo = "manipulando_string.txt"
+    obter_caminho_absoluto(nome_arquivo)  # função não definida aqui
+    texto = "Raphael Nossa aula Manipulando String."
+    manipula_string(texto, 2)
