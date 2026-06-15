@@ -1,0 +1,31 @@
+1. RAD que também conhecido como desenvolvimento rápido de aplicações, é um método ágil e iterativa prioriza a entrega de software
+que enfatiza a prototipagem rápida e o feedback dos usuários. Prototipação: O RAD entrega telas clicáveis em Tkinter já na primeira
+semana. Participação do usuário: Professores e secretários testam cada versão e validam se o boletim ou a chamada funcionam como
+eles esperam. Rapidez na entrega: Com desenvolvimento incremental, entregamos o módulo de matrícula primeiro,depois notas, depois
+frequência.
+
+2. A manipulação de arquivos em python seria usada para persistir os dados dos alunos entre execuções do programa, sem precisar
+de um SGBD como SQLite. Os dados que pode ser salvos são nomes,matrículas,turmas etc. Vantagem de usar os arquivos é a simplicidade
+e rapidez de implementação. Para um protótipo RAD, não precisa instalar nem configurar banco de dados. Quando o sistema começa a
+cresce acontecer uma falta de concorrência e integridade. Atualizar uma nota específica exige reescrever o arquivo todo ou usar
+seek (), que é complexo e propenso a erro. O csv é o melhor custo-benefício para dados tabulares como cadastros de alunos.
+
+3. O SQLite tem papel um Sistema Gerenciador de Banco de Dados Relacional embutido no Python. Diferente do MySQL ou PostgreSQL,
+ele não precisa de servidor ele só um banco inteiro é um unico arquivo .db é armazenar os dados dos alunos, como matrícula, nome,
+CPF e turma, em tabelas estruturadas com tipos definidos. A principal vantagem são comandos CRUD: INSERT, SELECT, UPDATE e DELETE
+permitem inserir, buscar, alterar e excluir registros específicos com precisão e performance. Além disso, o banco ajuda na organi
+zação por permitir tabelas relacionadas e garante segurança com integridade.
+
+4. A interface gráfica é essencial para o sistema da escola porque os funcionários não sabem programar, então o Tkinter cria
+janelas que facilitam o uso com elementos visuais como Entry para digitar matrícula e nome, Button para ações de cadastrar e buscar,
+Treeview para exibir a tabela de alunos e messagebox para dar avisos. Diferente do terminal, que exige digitar comandos SQL e pode
+quebrar com erros, a janela gráfica permite usar o sistema só com cliques, guiando o usuário com placeholders e atualizando a tabela
+na hora. O cuidado principal ao criar para iniciantes é validar os dados antes de salvar no SQLite e dar feedback claro com 
+mensagens simples, além de confirmar antes de excluir registros, evitando que o usuário quebre o sistema ou apague dados sem querer.
+
+5. Usando RAD, o desenvolvimento do sistema da escola seria feito em 4 etapas cíclicas: 1. Levantamento rápido com a secretaria para
+definir as telas e campos essenciais, sem documentação pesada. 2. Prototipação de uma versão inicial em Python + TKinter salvando em
+.csv com Entry, Button e Treeview, para entregar algo clicável em semanas. 3. Teste com usuários da escola usando dados reais para
+coletar feedback sobre usabilidade e funções faltantes, garantindo participação do usuário. 4. Refinamento aplicando as melhorias na
+interface e migrando a persistência de arquivos para banco SQLite com CRUD, INSERT, SELECT, UPDATE, DELETE, dando mais segurança e
+performance. Esse ciclo de prototipar, testar e ajustar se repete até o sistema ficar completo.
